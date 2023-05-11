@@ -17,7 +17,6 @@ document.querySelector("#categories").addEventListener("submit", function(e) {
     }
 }) 
 
-
 function thenCallback(response){
     if(response.status === 200){
         return response.json()
