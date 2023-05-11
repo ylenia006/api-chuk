@@ -25,7 +25,7 @@ function thenCallback(response){
 }
 
 function finalCallback(data) {
-    document.querySelector(".jokeBok").innerHTML = data.value
+    document.querySelector(".jokeBox").innerHTML = data.value
 
     document.querySelector(".urlBox").innerHTML =  data.url  
 }
@@ -33,3 +33,22 @@ function finalCallback(data) {
 function catchCallback(error) {
     document.querySelector(".jokeBox").innerHTML = error
 }
+
+document.querySelector(".copyButton").addEventListener("click", function(e) {
+    let CopyArea = document.querySelector(".jokeBox");
+    let copiedText = document.querySelector(".copyButton")
+
+
+    let range = document.createRange();
+    range.selectNode(CopyArea);
+
+    navigator.clipboard.writeText(CopyArea.textContent);
+    let CopyAler = document.execCommand('copy');
+
+
+    copiedText.innerHTML = "Joke Copied"
+    setTimeout(function() {
+        copiedText.innerHTML = "Copy"
+    }, 2000)   
+    return CopyAler;
+})

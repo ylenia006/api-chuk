@@ -8,7 +8,6 @@
 .title
 {
     color: #D8572A;
-    margin-bottom: 125px;
     font-size: 52px;
     text-shadow: -1.5px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1.5px #780116;
 }
@@ -62,6 +61,14 @@
     font-size: 16px;
 }
 
+#mitra{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: -78px;
+    right: -140px;
+}
+
 .copyButton
 {
     background-color: #D8572A;
@@ -88,14 +95,15 @@
 
 .url
 {
-    margin-bottom: 40px;
-    background-color: #7A331A;
+    margin-bottom: 15px;
+    background-color: #D8572A;
     padding: 14px 50px;
     border-radius: 10px;
     border: 0;
     font-size: 16px;
     position: relative;
     transition: all 0.5s ease-in-out;
+    text-align: center;
 }
 
 .urlText
