@@ -26,7 +26,7 @@ function thenCallback(response){
 function finalCallback(data) {
     document.querySelector(".jokeBox").innerHTML = data.value
 
-    document.querySelector(".urlBox").innerHTML =  data.url  
+    document.querySelector(".urlBox").href =  data.url  
 }
 
 function catchCallback(error) {
